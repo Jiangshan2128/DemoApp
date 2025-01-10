@@ -1,0 +1,36 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "DemoApp"
+
+include ':app'
+include 'feature-messaging-domain'
+project(':feature-messaging-domain').projectDir = file('./feature-messaging/domain/')
+include 'feature-messaging-android'
+project(':feature-messaging-android').projectDir = file('./feature-messaging/android/')
+include ':feature-containter'
+include ':feature-network'
+include 'feature-binder-client'
+project(':feature-binder-client').projectDir = file('./feature-binder/client/')
+include 'feature-binder-api'
+project(':feature-binder-api').projectDir = file('./feature-binder/api/')
+include 'feature-binder-service'
+project(':feature-binder-service').projectDir = file('./feature-binder/service/')
