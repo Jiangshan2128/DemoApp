@@ -47,6 +47,8 @@ dependencies {
     implementation libs.androidx.material3
     implementation project(":feature-binder-client")
     implementation project(":feature-messaging-android")
+    implementation project(":feature-messaging-domain")
+    implementation project(":feature-containter")
     implementation libs.retrofit
 
     testImplementation libs.junit

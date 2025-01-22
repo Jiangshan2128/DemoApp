@@ -34,3 +34,4 @@ include 'feature-binder-api'
 project(':feature-binder-api').projectDir = file('./feature-binder/api/')
 include 'feature-binder-service'
 project(':feature-binder-service').projectDir = file('./feature-binder/service/')
+include ':kotlin-processor'
